@@ -1,7 +1,7 @@
 # biomedical-retractions
 
 
-# Data Sources
+## Data Sources
 
 >PubMed Central® (PMC) is a free full-text archive of biomedical and life sciences journal literature at the U.S. National Institutes of Health's National Library of Medicine (NIH/NLM). 
 >
@@ -11,7 +11,22 @@
 
 https://www.ncbi.nlm.nih.gov/pmc/tools/ftp/
 
+## Instructions
+
 Once you have downloaded the data, extract the directories and place them in the data folder.  Please do not commit the ~45GB worth of xml files to this repo!  
 
-# Requirements
+From the root directory, you can create the text file which lists the path of each journal article using the following:
 
+>find .  -iname '*.nxml' > files-all.txt
+
+The spark script uses the path of each article as input, loads the xml and parse out the article-type, which identifies whether an article was retracted or not.  To run this script use:
+
+> spark-submit scripts/spark_retractions.py
+
+
+## Requirements
+
+
+
+
+## Notes
