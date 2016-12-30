@@ -26,6 +26,12 @@ The spark script uses the path of each article as input, loads the xml and parse
 
 ## Requirements
 
+Python 2.7+
+lxml
+
+Apache Spark is used for parsing the xml documents.
+http://spark.apache.org
+
 
 
 
